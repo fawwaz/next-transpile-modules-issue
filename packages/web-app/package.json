@@ -1,0 +1,56 @@
+{
+  "name": "@project/web-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "prettier": "prettier --write src/**/*.{ts,tsx} **/*.{ts,tsx}",
+    "lint": "eslint --fix src/**/*.{ts,tsx} **/*.{ts,tsx}",
+    "lint:fix": "eslint --fix src/**/*.{ts,tsx} **/*.{ts,tsx} --fix",
+    "checkTs": "tsc --noEmit",
+    "type-check": "tsc"
+  },
+  "lint-staged": {
+    "**/*.+(js|jsx|ts|tsx)": [
+      "npm run lint:fix",
+      "npm run prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "@project/web-ui": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/material-ui": "^0.21.8",
+    "@types/node": "^12.12.21",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-redux": "^7.1.16",
+    "autoprefixer": "^10.2.5",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-typescript-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-transpile-modules": "^7.2.0",
+    "postcss": "^8.3.0",
+    "prettier": "^2.3.0",
+    "tailwindcss": "^2.1.2",
+    "typescript": "4.0"
+  },
+  "license": "MIT"
+}

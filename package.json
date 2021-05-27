@@ -1,0 +1,6 @@
+{
+    "private": true,
+    "name": "gada-saas-monorepo",
+    "workspaces": ["packages/*"],
+    "scripts": {}
+}

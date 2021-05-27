@@ -1,0 +1,16 @@
+
+__tests__/**
+babelrc.js
+.prettierrc.js
+node_modules/**
+package.json
+package-lock.json
+*.lock
+tsconfig.json
+*.ttf
+*.png
+index.d.ts
+.eslintrc.js
+public/firebase-messaging-sw.js
+packages/web-app/styles/global.css
+next.config.js
